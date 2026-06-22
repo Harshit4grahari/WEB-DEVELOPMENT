@@ -1,0 +1,122 @@
+File Path in HTML :
+
+A file path tells the browser where a file (image, CSS file, JavaScript file, video, etc.) is located.
+
+Example: <img src="image.jpg" alt="Image"> Here image.jpg is the file path.
+ <link rel="stylesheet" href="style.css"> The browser looks for style.css and applies the styles.
+
+Types of File Paths:
+1.Relative File Path: A relative path specifies the location relative to the current HTML file.
+  Example Structure:
+project/
+│
+├── index.html
+├── style.css
+└── image.jpg
+In index.html, you can use: 
+    <img src="image.jpg" alt="Image">
+    Since image.jpg is in the same folder as index.html, only the filename is needed.
+
+2. File in a Subfolder: If the file is in a subfolder, you need to include the folder name in the path.
+Example Structure:
+project/
+│
+├── index.html
+└── images/
+    └── logo.png
+In index.html, you can use: 
+    <img src="images/logo.png" alt="Logo">
+    Since logo.png is in the images folder, you need to include the folder name in the path.
+
+3. File in a Parent Folder: If the file is in a parent folder, you can use ../ to go up one level in the directory structure.
+Example Structure:
+project/
+│
+├── images/
+│   └── logo.png
+│
+└── pages/
+    └── about.html
+In about.html, you can use:
+    <img src="../images/logo.png" alt="Logo">
+    Since logo.png is in the images folder, which is a parent folder of pages, you need to use ../ to navigate up one level and then into the images folder.
+
+4. Going Back Multiple Folders: If you need to go back multiple levels in the directory structure, you can use multiple ../ in the path.
+Example Structure:
+project/
+│
+├── images/
+│   └── logo.png
+│
+└── pages/
+    └── user/
+        └── profile.html
+In profile.html, you can use:
+    <img src="../../images/logo.png" alt="Logo">
+    Since logo.png is in the images folder, which is two levels up from profile.html, you need to use ../../ to navigate up two levels and then into the images folder.
+
+5. Absolute File Path: An absolute path specifies the complete URL or file path to the resource.
+Example: <img src="https://www.example.com/images/logo.png" alt="Logo">
+
+
+
+Using File Paths with CSS:
+Structure:
+project/
+│
+├── index.html
+└── css/
+    └── style.css
+In index.html, you can link the CSS file using:
+<link rel="stylesheet" href="css/style.css">
+Since style.css is in the css folder, you need to include the folder name in the path.
+In style.css, if you want to use an image as a background, you can specify the path to the image:
+body {
+    background-image: url('../images/background.jpg');
+}
+Since background.jpg is in the images folder, which is a parent folder of css, you need to use ../ to navigate up one level and then into the images folder.
+In summary, understanding file paths is crucial for correctly linking resources in your HTML documents. Always ensure that the paths you use are accurate based on the structure of your project to avoid broken links and missing resources.
+
+
+
+Using File Paths with JavaScript:
+Structure:
+project/
+│
+├── index.html
+└── js/
+    └── script.js
+In index.html, you can link the JavaScript file using:
+<script src="js/script.js"></script>
+Since script.js is in the js folder, you need to include the folder name in the path.
+In script.js, if you want to access an image or another resource, you can specify the
+path to the resource:
+const imagePath = '../images/photo.jpg';
+Since photo.jpg is in the images folder, which is a parent folder of js, you need to use ../ to navigate up one level and then into the images folder.
+This allows your JavaScript code to correctly reference the resource based on the directory structure of your project
+
+
+Common Symbols
+Symbol	Meaning
+.	    Current folder
+./	    Current folder
+..	    Parent folder
+../	    One folder back
+../../	Two folders back
+/	    Root folder (in many web server contexts)
+
+Real Project Example:
+portfolio/
+│
+├── index.html
+├── about.html
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── script.js
+│
+└── images/
+    ├── profile.jpg
+    └── logo.png
