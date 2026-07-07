@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>University Registration Form</h1>
+    
+    <p>All student's credentials must be provided.</p>
+    <hr>
+    <form>
+        <h2>Personal Information</h2>
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" required placeholder="Ex: Ram">
+        <br><br>
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" required placeholder="Ex: Kumar">
+        <br><br>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        <br><br>
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male">
+        <label>Male</label>
+        <input type="radio" name="gender" value="female">
+        <label>Female</label>
+        <input type="radio" name="gender" value="other">
+        <label>Other</label>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <br><br>
+        <h2>Academic Information</h2>
+        <label for="course">Course Applied For:</label>
+        <select name="course" id="course">
+            <option value="btech">B.Tech</option>
+            <option value="mtech">M.Tech</option>
+            <option value="mba">MBA</option>
+            <option value="msc">M.Sc</option>
+            <option value="phd">Ph.D</option>
+        </select>
+        <br><br>
+        <label for="year">Year of Admission:</label>
+        <input type="number" id="year" name="year" min="2000" max="2024" required>
+        <br><br>
+        <label for="skills">Skills:</label>
+        <input type="checkbox" name="skills" value="Coding">
+        <label>Coding</label>
+        <input type="checkbox" name="skills" value="PublicSpeaking">
+        <label>Public Speaking</label>
+        <input type="checkbox" name="skills" value="FineArts">
+        <label>Fine Arts</label>
+        <input type="checkbox" name="skills" value="Sports">
+        <label>Sports</label>
+        <br><br>
+        <label for="skills">Other:</label>
+        <input type="text" name="skills" placeholder="Specify other skills">
+        <br><br>
+        <h3>Upload Documents</h3>
+        <label for="transcript">Transcript:</label>
+        <input type="file" id="transcript" name="transcript" accept=".pdf,.doc,.docx" required>
+        <br><br>
+        <label for="photograph">Personal Photograph:</label>
+        <input type="file" id="photograph" name="photograph" accept=".jpg,.jpeg,.png" required>
+        <br><br>
+        <label for="hsc">High School Certificate:</label>
+        <input type="file" id="hsc" name="hsc" accept=".pdf,.doc,.docx" required>
+        <br><br>
+        <label for="intermediate">Intermediate Certificate:</label>
+        <input type="file" id="intermediate" name="intermediate" accept=".pdf,.doc,.docx" required>
+        <br><br>
+        <input type="submit" value="Submit Registration">
+    </form>
+</body>
+</html>
