@@ -1,0 +1,24 @@
+/* CSS Document */
+/* Box Model Properties 
+BAckground Color: for changing the background color 
+border: for changing the border properties 
+padding: for changing the padding properties 
+margin: for changing the margin properties 
+*/
+
+h1{
+    background-color: #e33c3c;
+    height: 40px;
+    width: 26%;
+    /* border-radius: 10px;
+    border: 2px solid #000;
+    border-color: #000; */
+    border: 2px solid #000;
+    padding: 3px 3px 3px 3px; /* top right bottom left */
+    margin: 0 auto; /* top right bottom left */
+}
+h2{
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #0e489f;
+}
