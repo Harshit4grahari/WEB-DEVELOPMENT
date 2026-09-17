@@ -1,5 +1,8 @@
 span{ /* span is an inline element which can be styled */
     color: red;
-    background-color: yellow;
+    background-color: yellow; /* background color of the span element */
     font-size: 20px;
+    /*padding margin border are not applicable to inline elements */
+    /* padding: 10px; only applicable in horizontal direction */
+    /* margin: 10px; only applicable in horizontal direction */
 }
